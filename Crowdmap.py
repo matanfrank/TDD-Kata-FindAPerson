@@ -13,6 +13,10 @@ class Crowdmap(object):
 			if self.location_service.find(post): # if location_service.find(post):
 				return True
 		return False
+		
+			def getlocation(self,post):
+		return post.find("Bangkok")
+
 
 		
 class LocationService:
