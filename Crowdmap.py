@@ -14,8 +14,13 @@ class Crowdmap(object):
 				return True
 		return False
 		
-			def getlocation(self,post):
+	def getlocation(self,post):
 		return post.find("Bangkok")
+		
+	def is_diff_location_for_name(self,name):
+		name_post=self.get_all_posts_for(name)
+		locations=self.location_service.getallplace(name)
+		return (len(locations)!=1)
 
 
 		
